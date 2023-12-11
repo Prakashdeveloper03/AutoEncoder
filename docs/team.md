@@ -20,7 +20,7 @@ const members = [{
     ]
   },
   {
-    avatar: 'assets/siva.jpeg',
+    avatar: 'https://github.com/identicons/jasonlong.png',
     name: 'Siva Prakash',
     title: 'Student',
     links: [
