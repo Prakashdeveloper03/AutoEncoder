@@ -1,0 +1,55 @@
+# AutoEncoders
+
+## Introduction
+
+In the era of Artificial Intelligence (AI), human efforts are minimized by applying automation to several processes. As technology is increasing, storage and computation capabilities are also increasing. Deep Learning and Machine Learning concepts have been around for almost 60 years, but due to the lack of resources, we were not able to explore these technologies much.
+
+In the past few years, there has been a boom in the field of AI, applied to multiple fields like Healthcare, Insurance, Banking, etc. This progress became possible because of advancements in GPUs and faster storage mechanisms.
+
+Now, you might be wondering why I am talking about the storage and processing capabilities of AI when I should be discussing what Autoencoders are, right? Storage is specifically what makes Autoencoders prominent in Machine Learning. Autoencoders are self-supervised models that can learn to compress input data efficiently. Although this is not the only use-case of Autoencoders, there are plenty. So first, let’s discuss what an Autoencoder is.
+
+## What are Autoencoders?
+
+Autoencoders are self-supervised machine learning models used to reduce the size of input data by recreating it. These models are trained as supervised machine learning models, and during inference, they work as unsupervised models, which is why they are called self-supervised models. An Autoencoder is made up of two components:
+
+1. **Encoder:** It works as a compression unit that compresses the input data.
+
+2. **Decoder:** It decompresses the compressed input by reconstructing it.
+
+![Autoencoders, Encoder, and Decoder](assets/autoencoder.png)
+
+In an Autoencoder, both the Encoder and Decoder are made up of a combination of NN (Neural Networks) layers, which help to reduce the size of the input image by recreating it. In the case of CNN Autoencoders, these layers are CNN layers (Convolutional, Max Pool, Flattening, etc.), while in the case of RNN/LSTM, their respective layers are used.
+
+## Autoencoder Components:
+
+Autoencoders consists of 4 main parts:
+
+1. **Encoder:** In which the model learns how to reduce the input dimensions and compress the input data into an encoded representation.
+
+2. **Bottleneck:** which is the layer that contains the compressed representation of the input data. This is the lowest possible dimensions of the input data.
+
+3. **Decoder:** In which the model learns how to reconstruct the data from the encoded representation to be as close to the original input as possible.
+
+4. **Reconstruction Loss:** This is the method that measures measure how well the decoder is performing and how close the output is to the original input.
+
+## Types of Autoencoders
+
+Autoencoders are flexible neural networks that can be customized for various tasks. They come in different forms, each with unique strengths and limitations.
+
+- **Vanilla Autoencoders:** Basic autoencoders that efficiently encode and decode data.
+- **Denoising Autoencoders:** Improved robustness to noise and irrelevant information.
+- **Sparse Autoencoders:** Learn more compact and efficient data representations.
+- **Contractive Autoencoders:** Generate representations less sensitive to minor data variations.
+- **Variational Autoencoders:** Generate new data points that resemble the training data.
+
+The choice of autoencoder depends on the specific task and data characteristics.
+
+## Applications of Autoencoders
+
+There are several applications of Autoencoders; some of the important ones are:
+
+1. **File Compression:** The primary use of Autoencoders is to reduce the dimensionality of input data, commonly referred to as file compression. Autoencoders work with all kinds of data like Images, Videos, and Audio, facilitating faster sharing and viewing of data than the original file size.
+
+2. **Image De-noising:** Autoencoders are also used as noise removal techniques (Image De-noising). What makes it the best choice for de-noising is that it does not require any human interaction. Once trained on any kind of data, it can reproduce that data with less noise than the original image.
+
+3. **Image Transformation:** Autoencoders are used for image transformations, typically classified under GAN (Generative Adversarial Networks) models. Using these, we can transform B/W images to colored ones and vice versa, up-sample and down-sample the input data, etc.
