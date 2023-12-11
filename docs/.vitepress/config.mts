@@ -5,14 +5,21 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
+      { text: "Team", link: "/team" },
       { text: "About", link: "/about" },
       { text: "Notebook", link: "/notebook" },
     ],
 
+    logo: "../assets/icon.svg",
+
     sidebar: [
       {
         text: "Examples",
-        items: [{ text: "Notebook", link: "/notebook" }],
+        items: [
+          { text: "Team", link: "/team" },
+          { text: "About", link: "/about" },
+          { text: "Notebook", link: "/notebook" },
+        ],
       },
     ],
 
@@ -22,5 +29,21 @@ export default defineConfig({
         link: "https://github.com/Prakashdeveloper03/AutoEncoder",
       },
     ],
+
+    search: {
+      provider: "local",
+    },
+
+    editLink: {
+      pattern:
+        "https://github.com/Prakashdeveloper03/AutoEncoder/edit/main/docs/:path",
+    },
+
+    lastUpdated: true,
+
+    footer: {
+      message: "Thank you for visiting ❤",
+      copyright: "Copyright © 2023 by Siva Prakash",
+    },
   },
 });

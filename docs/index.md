@@ -1,6 +1,9 @@
 ---
 layout: home
 
+head:
+  - ["link", { rel: "icon", href: "assets/icon.svg" }]
+
 hero:
   name: "AutoEncoder"
   tagline: "Unlocking the Potential of AutoEncoder in Machine Learning"

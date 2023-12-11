@@ -1,3 +1,8 @@
+---
+head:
+  - ["link", { rel: "icon", href: "assets/icon.svg" }]
+---
+
 # AutoEncoders
 
 ## Introduction
