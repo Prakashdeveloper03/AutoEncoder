@@ -1,8 +1,3 @@
----
-head:
-  - ["link", { rel: "icon", href: "assets/icon.svg" }]
----
-
 # Image File Compression
 
 ## Introduction
@@ -225,7 +220,7 @@ class AutoEncoder(nn.Module):
         return z
 ```
 
-**Explanation: **
+**Explanation:**
 
 - This class inherits from `nn.Module`, which is the base class for all neural network modules in PyTorch.
 
@@ -314,12 +309,6 @@ for epoch in range(EPOCH):
             epoch_progress_bar.update(1)
         epoch_progress_bar.close()
 ```
-
-    Epoch 1: 100%|██████████| 188/188 [00:19<00:00,  9.46batch/s, train_loss=0.0199]
-    Epoch 2: 100%|██████████| 188/188 [00:18<00:00, 10.35batch/s, train_loss=0.0202]
-    Epoch 3: 100%|██████████| 188/188 [00:18<00:00, 10.35batch/s, train_loss=0.02]
-    Epoch 4: 100%|██████████| 188/188 [00:18<00:00, 10.30batch/s, train_loss=0.0198]
-    Epoch 5: 100%|██████████| 188/188 [00:18<00:00, 10.18batch/s, train_loss=0.0189]
 
 #### Model Evaluation Loop:
 

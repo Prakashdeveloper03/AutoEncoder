@@ -1,9 +1,3 @@
----
-layout: page
-head:
-  - ["link", { rel: "icon", href: "assets/icon.svg" }]
----
-
 <script setup>
 import {
   VPTeamPage,

@@ -10,7 +10,12 @@ export default defineConfig({
       { text: "Notebook", link: "/notebook" },
     ],
 
-    logo: "../assets/icon.svg",
+    head: [
+      ["link", { rel: "icon", type: "image/svg", href: "/icon.svg" }],
+      ["meta", { name: "theme-color", content: "#ffffff" }],
+    ],
+
+    logo: "/icon.svg",
 
     sidebar: [
       {
