@@ -20,3 +20,17 @@ features:
   - title: "Power of AutoEncoders"
     details: "Harness the power of AutoEncoders for tasks such as data compression, anomaly detection, and feature learning."
 ---
+
+<style>
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+</style>

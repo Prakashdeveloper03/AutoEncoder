@@ -2,26 +2,26 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   title: "AutoEncoder",
+  cleanUrls: true,
+  head: [["link", { rel: "icon", type: "image/svg", href: "/icon.svg" }]],
+
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
       { text: "Team", link: "/team" },
+      { text: "Guide", link: "/guide" },
       { text: "About", link: "/about" },
       { text: "Notebook", link: "/notebook" },
     ],
 
-    head: [
-      ["link", { rel: "icon", type: "image/svg", href: "/icon.svg" }],
-      ["meta", { name: "theme-color", content: "#ffffff" }],
-    ],
-
-    logo: "/icon.svg",
+    logo: { src: "/icon.svg", width: 24, height: 24 },
 
     sidebar: [
       {
-        text: "Examples",
+        text: "Sections",
         items: [
           { text: "Team", link: "/team" },
+          { text: "Guide", link: "/guide" },
           { text: "About", link: "/about" },
           { text: "Notebook", link: "/notebook" },
         ],

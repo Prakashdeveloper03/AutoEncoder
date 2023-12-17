@@ -7,26 +7,26 @@ import {
 
 const members = [{
     avatar: './assets/ident.png',
-    name: 'Siva Prakash',
-    title: 'Student',
+    name: 'Dr Deivamani',
+    title: 'Professor',
     links: [
-      { icon: 'github', link: 'https://github.com/Prakashdeveloper03' },
+      { icon: 'github', link: 'https://github.com/DeivamaniM' }
     ]
   },
   {
     avatar: './assets/ident.png',
-    name: 'Kamaleshwar',
-    title: 'Student',
+    name: 'Muthumani',
+    title: 'Guide',
     links: [
-      { icon: 'github', link: 'https://github.com/KamaleshwarG' }
+      { icon: 'github', link: 'https://github.com/muthumani' }
     ]
   },
   {
     avatar: './assets/ident.png',
-    name: 'Pooja',
-    title: 'Student',
+    name: 'Aakash Gnanakumar',
+    title: 'Guide',
     links: [
-      { icon: 'github', link: 'https://github.com/poojashree1018' }
+      { icon: 'github', link: 'https://github.com/aakgna' }
     ]
   },
 ]
@@ -35,10 +35,10 @@ const members = [{
 <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>
-      Our Team
+      Our Guides
     </template>
     <template #lead>
-The advancement of autoencoder technology is driven by a collaborative and diverse team of students.
+The advancement of autoencoder technology is driven by a collaborative and diverse team of guides.
     </template>
   </VPTeamPageTitle>
   <VPTeamMembers

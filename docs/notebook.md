@@ -60,11 +60,7 @@ from skimage.io import imread
 from skimage.transform import resize
 
 data = glob("./PlantVillage/Noisy_Dataset/Train_Data/P*/*")
-
-# Use list comprehension to read and resize images
 images = [resize(imread(file), (16, 16, 3), anti_aliasing=True) for file in data]
-
-# Converting the images into float32 array
 images_arr = np.asarray(images, dtype="float32")
 print("Dataset:", images_arr.shape)
 ```
@@ -91,13 +87,9 @@ Uses the ImageFolder class from torchvision.datasets to create PyTorch datasets 
 
 ```python
 pure_data = glob("./PlantVillage/Pure_Dataset/Train_Data/P*/*")
-
-# Use list comprehension to read and resize images
 pure_images = [
     resize(imread(file), (128, 128, 3), anti_aliasing=True) for file in pure_data
 ]
-
-# Converting the images into float32 array
 images_pure = np.asarray(pure_images, dtype="float32")
 print("Dataset:", images_pure.shape)
 ```
@@ -121,11 +113,7 @@ for i in range(9):
 
 ```python
 test_data = glob("./PlantVillage/Noisy_Dataset/Test_Data/P*/*")
-
-# Use list comprehension to read and resize images
 images = [resize(imread(file), (128, 128, 3), anti_aliasing=True) for file in test_data]
-
-# Converting the images into float32 array
 images_test = np.asarray(images, dtype="float32")
 print("Dataset:", images_test.shape)
 ```
@@ -149,11 +137,7 @@ for i in range(9):
 
 ```python
 test_data = glob("./PlantVillage/Pure_Dataset/Test_Data/P*/*")
-
-# Use list comprehension to read and resize images
 images = [resize(imread(file), (128, 128, 3), anti_aliasing=True) for file in test_data]
-
-# Converting the images into float32 array
 images_ground = np.asarray(images)
 images_ground = images_ground.astype("float32")
 print("Dataset:", images_ground.shape)
@@ -253,11 +237,7 @@ print("Using PyTorch version:", torch.__version__, "CUDA:", torch.cuda.is_availa
 
 ```python
 model = AutoEncoder().to(device)
-
-# Initialization of Mean Square Error
 loss_func = nn.MSELoss()
-
-# Initialization of Optimizer
 optimizer = torch.optim.Adam(model.parameters(), lr=0.002)
 ```
 
@@ -287,7 +267,6 @@ from tqdm import tqdm
 make_dir()
 EPOCH = 5
 for epoch in range(EPOCH):
-    # Initialize tqdm for the outer loop (epochs)
     with tqdm(
         total=len(train_loader), desc=f"Epoch {epoch + 1}", unit="batch"
     ) as epoch_progress_bar:
@@ -296,15 +275,12 @@ for epoch in range(EPOCH):
             t_x = t_x.to(device)
             t_y, label = y
             t_y = t_y.to(device)
-
             optimizer.zero_grad()
             decoded1 = model(t_x)
             loss = loss_func(decoded1, t_y)
             train_loss = loss.item()
             loss.backward()
             optimizer.step()
-
-            # Update progress bar for the inner loop (batches)
             epoch_progress_bar.set_postfix(train_loss=train_loss)
             epoch_progress_bar.update(1)
         epoch_progress_bar.close()
@@ -315,26 +291,15 @@ for epoch in range(EPOCH):
 ```python
 model.eval()
 total_loss = 0.0
-
-# Iterate over batches in the train_loader and pure_loader
 for batch_idx, (x, y) in enumerate(zip(train_loader, pure_loader)):
-    # Convert the images and labels to GPU for faster execution
     t_x, _ = x
     eval_x = t_x.to(device)
     t_y, _ = y
     eval_y = t_y.to(device)
-
-    # Passing the data to the model (Forward Pass)
     decoded2 = model(eval_x)
-
-    # Calculating mean square error loss
     loss = loss_func(decoded2, eval_y)
     print(loss)
-
-    # Accumulate total loss
     total_loss += loss.item()
-
-    # Save images (assuming save_pic is a function that saves the images)
     for i in range(len(decoded2)):
         save_pic(
             decoded2[i].cpu().data, name=f"./PlantVillage/Denoised_Images/ae_{i}.jpg"
@@ -372,14 +337,11 @@ for i in range(16):
 ```python
 model.eval()
 for x, y in zip(test_loader, ground_loader):
-    # Convert the images and labels to gpu for faster execution
     t_x, _ = x
     eval_x = t_x.to(device)
     t_y, _ = y
     eval_y = t_y.to(device)
-    # Passing the data to the model (Forward Pass)
     decoded2 = model(eval_x)
-    # Calculating mean square error loss
     loss = loss_func(decoded2, eval_y)
     print(loss)
 ```
