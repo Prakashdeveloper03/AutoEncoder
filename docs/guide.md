@@ -6,7 +6,7 @@ import {
 } from 'vitepress/theme'
 
 const members = [{
-    avatar: './assets/ident.png',
+    avatar: 'https://github.com/identicons/jasonlong.png',
     name: 'Dr Deivamani',
     title: 'Professor',
     links: [
@@ -14,7 +14,7 @@ const members = [{
     ]
   },
   {
-    avatar: './assets/ident.png',
+    avatar: 'https://github.com/identicons/jasonlong.png',
     name: 'Muthumani',
     title: 'Guide',
     links: [
@@ -22,7 +22,7 @@ const members = [{
     ]
   },
   {
-    avatar: './assets/ident.png',
+    avatar: 'https://github.com/identicons/jasonlong.png',
     name: 'Aakash Gnanakumar',
     title: 'Guide',
     links: [
