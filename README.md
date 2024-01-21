@@ -8,6 +8,12 @@
 
 AutoEncoder is a project focused on noise removal techniques. What makes it the best choice for de-noising is that it does not require any human interaction. Once trained on any kind of data, it can reproduce that data with less noise than the original image.
 
+## Team Members
+
+1. Pooja (2022179030)
+2. Kamaleshwar (2022179040)
+3. Siva Prakash (2022179054)
+
 ## Installation
 
 Clone the repository using `git`
